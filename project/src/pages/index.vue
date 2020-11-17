@@ -33,6 +33,10 @@ export default {
     ...mapActions(["changeUserInfoAction"]),
     //logout退出事件
     logout() {
+      this.$message({
+        message: "成功退出",
+        type: "success",
+      });
       this.changeUserInfoAction(null);
       //退出之后强制跳转登录页
       this.$router.push("/login");
@@ -52,11 +56,11 @@ export default {
 
 .userInfo {
   float: right;
-  font-size 20px
-  margin-top 10px
+  font-size: 20px;
+  margin-top: 10px;
 }
-.userInfo span{
-  color #333
-  
+
+.userInfo span {
+  color: #333;
 }
 </style>
